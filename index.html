@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rijal Rizqullah</title>
+    <style>
+        /* CSS Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 1. Header Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        /* 2. Profil (Foto & Nama) */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%; /* Membuat foto menjadi bulat */
+            border: 3px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .profile-text h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-text p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* 3. Skills & Projects (Flexbox Grid) */
+        .grid-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .grid-col {
+            flex: 1;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+        }
+
+        .grid-col h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .skills-list, .projects-list {
+            list-style: none;
+        }
+
+        .skills-list li, .projects-list li {
+            margin-bottom: 10px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* 4. Portofolio (Horizontal Scroll) */
+        .portfolio-section {
+            margin-bottom: 60px;
+        }
+
+        .portfolio-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-gallery {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto; /* Mengaktifkan scroll horizontal */
+            padding-bottom: 15px; /* Memberi ruang untuk scrollbar */
+            scroll-snap-type: x mandatory;
+        }
+
+        .portfolio-item {
+            flex: 0 0 300px; /* Lebar tetap untuk setiap gambar */
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            scroll-snap-align: start;
+            border: 1px solid #eaeaea;
+        }
+
+        /* Memperhalus tampilan scrollbar */
+        .portfolio-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        .portfolio-gallery::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        /* 5. Kontak */
+        .contact-section {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #eaeaea;
+            margin-bottom: 20px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: #222;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #000;
+        }
+
+        /* Responsive Design untuk HP */
+        @media (max-width: 600px) {
+            .grid-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="logo">portfolio.</div>
+            <nav>
+                <a href="#profile">Profile</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="profile" class="profile-section">
+            <img src="assets/image/wongkalahan.jpg" alt="Foto Profil Rijal" class="profile-img">
+            <div class="profile-text">
+                <h1>Rijal Rizqullah</h1>
+                <p>Web Developer & Informatics Student</p>
+            </div>
+        </section>
+
+        <section id="skills" class="grid-section">
+            <div class="grid-col">
+                <h2>Technical Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML, CSS & JavaScript</li>
+                    <li>Next.js & TypeScript</li>
+                    <li>Oracle SQL / Database Management</li>
+                    <li>Numerical Methods (Python)</li>
+                </ul>
+            </div>
+
+            <div class="grid-col">
+                <h2>Recent Projects</h2>
+                <ul class="projects-list">
+                    <li><strong>Strat.OS</strong> - IoT & AI for CS2 Analysis</li>
+                    <li><strong>Web Portofolio</strong> - HTML & CSS Design</li>
+                    <li><strong>Valorant DB</strong> - Database Management</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <h2>Featured Works</h2>
+            <div class="portfolio-gallery">
+                <img src="assets/image/sonnyzero.jpg" alt="Portfolio 1" class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300/e0e0e0/555555?text=Project+2" alt="Portfolio 2" class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300/f0f0f0/555555?text=Project+3" alt="Portfolio 3" class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300/d0d0d0/555555?text=Project+4" alt="Portfolio 4" class="portfolio-item">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let's work together</h2>
+            <p style="color: #666; margin-bottom: 20px;">Open for collaborations and new opportunities.</p>
+            <a href="mailto:emailmu@domain.com" class="contact-btn">Send an Email</a>
+        </section>
+
+    </div>
+
+</body>
+</html>
