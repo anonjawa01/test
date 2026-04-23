@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental - Brutalism Edition</title>
+    <link rel="stylesheet" href="style1.css"/>
+</head>
+
+<body>
+    <div id="search">
+        <div class="title">
+            <h1>Car Rental</h1>
+            <p>Find the perfect car for your next adventure</p>
+        </div>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="pickup">Rental Location:</label>
+                <select id="pickup" name="pickup">
+                    <option value="">Select Location</option>
+                    <option value="location1">Yogyakarta</option>
+                    <option value="location2">Bali</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pickup-date">Rental Start Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date">
+            </div>
+            <div class="form-group">
+                <label for="return-date">Rental End Date:</label>
+                <input type="date" id="return-date" name="return-date">
+            </div>
+            <button type="submit">Search</button>
+        </div>
+    </div>
+
+    <div class="car-list-wrapper">
+        <h2>Car List_</h2>
+        <div class="car-list">
+            <div class="car-item">
+                <img src="https://images.unsplash.com/photo-1503376712344-652d2f1f3a56?auto=format&fit=crop&w=600&q=80" alt="Car 1">
+                <h3>Sedan X</h3>
+                <p>Standard City Car. Manual. 4 Seats.</p>
+            </div>
+            <div class="car-item">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Car 2">
+                <h3>SUV Alpha</h3>
+                <p>Offroad Capable. Auto. 6 Seats.</p>
+            </div>
+            <div class="car-item">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Car 3">
+                <h3>Sport Z</h3>
+                <p>High Performance. Auto. 2 Seats.</p>
+            </div>
+            <div class="car-item">
+                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=600&q=80" alt="Car 4">
+                <h3>Classic V</h3>
+                <p>Vintage Experience. Manual. 4 Seats.</p>
+            </div>
+            <div class="car-item">
+                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" alt="Car 5">
+                <h3>Hatchback</h3>
+                <p>Compact & Efficient. Auto. 4 Seats.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
